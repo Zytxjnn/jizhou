@@ -1,0 +1,13 @@
+@import "./normalize.css";
+@import "~antd/dist/antd.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --wrapper-width:14rem;
+}
+
+
+
