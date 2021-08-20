@@ -44,7 +44,7 @@ export const Wrapper = styled.div`
         font-size: .18rem;
         cursor: pointer;
         margin-top: .2rem;
-        margin-bottom: .2rem;
+        margin-bottom: .1rem;
       }
       
       .sub-title{
@@ -58,8 +58,9 @@ export const Wrapper = styled.div`
       display: flex;
       
       img{
-        width: 1.3rem;
-        margin: 20px;
+        width: 1.85rem;
+        height: 2rem;
+        margin-left: .2rem;
         cursor: pointer;
         transition: all .3s linear;
         

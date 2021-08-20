@@ -19,8 +19,13 @@ export default function Services(props){
             const data = res.data.Data;
             const len = data.length-1;
 
+            data[1].Name = '旅游常识';
+            data[2].Name = '注意事项';
+            data[3].Name = '气象环保';
+            data[4].Name = '在线咨询';
 
-            setList(data.slice(1,len))
+            setList(data.slice(1,len));
+
         })
     },[]);
 

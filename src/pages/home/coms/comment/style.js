@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
   .btn{
     position: absolute;
-    top: 55%;
+    top: 50%;
     width: .3rem;
     height: .3rem;
     border-radius:50%;
@@ -20,68 +20,58 @@ export const Wrapper = styled.div`
     font-size: .17rem;
     cursor: pointer;
     user-select: none;
-    
-    
+
+
     &.prev{
       left: 0;
-     
+
     }
     &.next{
       right: 0;
 
     }
   }
- 
-
-  .description{
-    width: 80%;
-    margin:0 auto;
-    font-size: .15rem;
-    line-height: .3rem;
+  
+  .list{
+    display: flex !important;
+    justify-content: space-between;
+    
+    .item{
+      box-sizing: border-box;
+      width: 22%;
+      margin-bottom: .1rem;
+      border-radius: .05rem;
+      overflow: hidden;
+      .top{
+        img{
+          width: 100%;
+          height: 2rem;
+        }
+        
+      }
+      
+      .bottom{
+        padding: .2rem;
+        
+        .name{
+          font-size: .2rem;
+          padding-bottom: .1rem;
+        }
+        
+        .synopsis{
+          line-height: .26rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+        }
+      }
+    }
   }
   
   .ant-carousel{
     width: 90%;
     margin:0 auto;
   }
-
-  .list{
-    display: flex !important;
-    justify-content: space-between;
-    flex-wrap: wrap;
-   
-    i{
-     width: 22%;
-    }
-    
-    .item{
-      position: relative;
-      width: 22%;
-      cursor: pointer;
-      overflow: hidden;
-     
-      
-      
-      img{
-        height: 100%; 
-        transition: all .3s linear;
-      }
-      
-      &:hover img{
-        transform: scale(1.1);
-      }
-      
-      .show-btn{
-        position: absolute;
-        bottom: .1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        color:#fff;
-        padding: .03rem .3rem;
-        background: linear-gradient(#45a7fe,#5dd1fc);
-      }
-    }
-  }
-  
-
 `

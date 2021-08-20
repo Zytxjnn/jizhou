@@ -11,7 +11,7 @@ export default function Footer(props){
     useEffect(() => {
         getQR().then(res => {
             const data = res.data.Data;
-            setImgs(data.slice(0,data.length-1))
+            setImgs(data.slice(0,data.length-2))
         });
     },[]);
 

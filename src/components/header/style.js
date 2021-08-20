@@ -51,7 +51,7 @@ export const Right = styled.div`
       border-radius: .1rem;
       left: 50%;
       transform: translateX(-50%);
-      top: .5rem;
+      top: .6rem;
       
       .item{
         width: 1rem;

@@ -25,13 +25,15 @@ export const Wrapper = styled.div`
           cursor: pointer;
         }
         
-        .left{
-          background-color: #262b38;
-          color:#fff;
-        }
-        .right{
+        .left.right{
           background-color: #fff;
           color:#262b38;
+        }
+
+        
+        .active{
+          background-color: #262b38;
+          color:#fff;
         }
       }
       

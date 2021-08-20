@@ -16,9 +16,9 @@ export default function BeautySpot(){
 
     useEffect(() => {
         getBeautySpot().then(res => {
-            const data = res.data.Data;
-            setList(data.slice(0,data.length-1));
-        })
+                const data = res.data;
+                setList(data);
+            })
     },[]);
 
     return (
