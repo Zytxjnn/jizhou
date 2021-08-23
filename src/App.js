@@ -1,38 +1,39 @@
-import React, {Suspense, useEffect, useState} from 'react';
+import React, {Suspense} from 'react';
 import { renderRoutes } from 'react-router-config';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,useLocation } from 'react-router-dom';
+// import {} from "react-router";
+import {Provider} from "react-redux";
 
 import routers from './router';
 import '@/assets/css/reset.css';
 import '@/common/js/rem.js';
 
-import {getSiteMenus} from "./network/home";
 
 
+import { BackTop } from 'antd';
 import Loading from '@/common/components/loading';
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-import { BackTop } from 'antd';
+import BackgroundImage from './components/BackgroundImage/backgroundImage';
+
+import store from "./store";
+
 
 
 
 function App() {
-    const [menu,setMenu] = useState([]);
-    useEffect(() => {
-        getSiteMenus().then(res => {
-            setMenu(res.data);
-        })
-    },[]);
-
   return (
-    <BrowserRouter>
-        <Header menu={menu} />
-          <Suspense fallback={<Loading/>}>
-          {renderRoutes(routers)}
-          </Suspense>
-        <Footer menu={menu} />
-        <BackTop/>
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <Header />
+             <BackgroundImage/>
+            <Suspense fallback={<Loading/>}>
+                {renderRoutes(routers)}
+            </Suspense>
+            <Footer />
+            <BackTop/>
+        </BrowserRouter>
+    </Provider>
   );
 }
 

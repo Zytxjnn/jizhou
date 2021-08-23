@@ -7,9 +7,9 @@ export const Wrapper = styled.div`
 
   .btn{
     position: absolute;
-    top: 55%;
-    width: .3rem;
-    height: .3rem;
+    top: 60%;
+    width: .4rem;
+    height: .4rem;
     border-radius:50%;
     display: flex;
     justify-content: center;
@@ -20,14 +20,14 @@ export const Wrapper = styled.div`
     font-size: .17rem;
     cursor: pointer;
     user-select: none;
-    
+    z-index: 10;
     
     &.prev{
-      left: 0;
+      left: .1rem;
      
     }
     &.next{
-      right: 0;
+      right: .1rem;
 
     }
   }
@@ -40,10 +40,7 @@ export const Wrapper = styled.div`
     line-height: .3rem;
   }
   
-  .ant-carousel{
-    width: 90%;
-    margin:0 auto;
-  }
+ 
 
   .list{
     display: flex !important;
@@ -57,13 +54,14 @@ export const Wrapper = styled.div`
     .item{
       position: relative;
       width: 22%;
+      height: 100%;
       cursor: pointer;
       overflow: hidden;
      
       
       
       img{
-        height: 100%; 
+       
         transition: all .3s linear;
       }
       
@@ -73,7 +71,7 @@ export const Wrapper = styled.div`
       
       .show-btn{
         position: absolute;
-        bottom: .1rem;
+        bottom: .2rem;
         left: 50%;
         transform: translateX(-50%);
         color:#fff;

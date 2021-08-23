@@ -8,3 +8,12 @@ export function _chunk(arr,num){
     }
     return _arr;
 }
+
+export function setStorage(key,data){
+    localStorage.setItem(key,JSON.stringify(data));
+}
+
+export function getStorage(key){
+
+    return JSON.parse(localStorage.getItem(key));
+}

@@ -11,8 +11,9 @@ import {getCraftWork} from "@/network/home";
 
 export default function CraftWork(props){
     const [list,setList] = useState([]);
-    const [title,setTitle] = useState('');
-    const [subTitle,setSubTitle] = useState('');
+    const [title,setTitle] = useState('治窑工艺');
+    const [subTitle,setSubTitle] = useState('NEWS CENTER');
+
     const carouselRef = useRef();
 
     useEffect(() => {
@@ -25,10 +26,9 @@ export default function CraftWork(props){
             while(index < len){
                 arr.push(data.slice(index,(index+=4)));
             }
-            // console.log(arr)
+
             setList(arr);
-            setTitle('治窑工艺')
-            setSubTitle('NEWS CENTER');
+
         })
     },[]);
 
@@ -42,6 +42,7 @@ export default function CraftWork(props){
 
     return (
         <Wrapper>
+
             <Title title={title} subTitle={subTitle} />
             <div className="switch">
                 <div className="prev btn" onClick={() => {carouselChange(0)}}><LeftOutlined/></div>

@@ -11,10 +11,14 @@ export const Wrapper = styled.div`
       .item{
         position: relative;
         width: 23%;
+        height: 1.8rem;
         border:1px solid #eee;
         cursor: pointer;
         
+        
         img{
+          width: 100%;
+          height: 100%;
           filter: blur(2px);
         }
         

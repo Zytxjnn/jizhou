@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 
-import  {Carousel} from 'antd'
+import  {Carousel,Skeleton} from 'antd'
 import Title from '../Ttitle'
 import {
     Wrapper
@@ -20,7 +20,6 @@ export default function News(){
     useEffect(() => {
         getNews().then(res => {
             setList([res[0].data.Data,res[1].data.Data]);
-            console.log(list);
         })
     },[]);
 
@@ -37,8 +36,6 @@ export default function News(){
     }
 
 
-
-
     return (
         <Wrapper>
             <Title title={title} subTitle={subTitle} />
@@ -51,7 +48,7 @@ export default function News(){
                     <div className="container">
                         <div className="list">
                             {
-                                list[activeIndex] && list[activeIndex].map(item => {
+                                list[activeIndex] ? list[activeIndex].map(item => {
                                     return (
                                         <div className="item hover:shadow" key={item.Key}>
                                             <div className="left">
@@ -64,7 +61,7 @@ export default function News(){
                                             </div>
                                         </div>
                                     )
-                                })
+                                }) :  <div><Skeleton  /><Skeleton  /><Skeleton  /></div>
                             }
                         </div>
                     </div>
@@ -79,7 +76,7 @@ export default function News(){
                             list[activeIndex] && list[activeIndex].map(item => {
                                 return (
                                     <div key={item.Key}>
-                                        <img src={item.ImgUrl} alt=""/>
+                                        <img src={item.ImgBoo} alt=""/>
                                     </div>
                                 )
                             })

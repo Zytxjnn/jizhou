@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  position: relative;
+
   .slick-dots{
     display: none !important;
   }
   
- position: relative;
-  
   img{
     width: 100%;
-    max-height: 90vh;
   }
   
   .switch{

@@ -1,6 +1,8 @@
 import {g} from './request';
-import headerConfig from '@/common/header.js';
 
-export const getHeaderConfig = () => {
-  return headerConfig
-};
+
+export function getContent(id){
+  return g(`SiteContent/${id}`).then(res => {
+    return res.data.Entity;
+  })
+}

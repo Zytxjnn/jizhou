@@ -84,3 +84,14 @@ export const getCraftWork = () => {
         return res.data.Data
     })
 }
+
+export const getAddressAndTel = () =>{
+    return home.post('SiteSetting/Search', {
+        IsLevel: true,
+        Key: "ADDRTEL",
+        Limit: 0,
+        Page: 0,
+    }).then(res => {
+        return res.data.Data
+    })
+}

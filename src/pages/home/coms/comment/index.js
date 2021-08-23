@@ -35,7 +35,7 @@ export default function Comment(){
             const data = res.data.Data.slice(1).filter(item => {
                 return item.ImgUrl
             });
-            setList(_chunk(data,4))
+            setList(_chunk(data,3))
         })
     },[]);
 
